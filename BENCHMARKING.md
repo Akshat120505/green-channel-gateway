@@ -1,12 +1,13 @@
 # Financial Benchmark & Portfolio Unit Economics: 100,000 Cases
 
-**Model Scope:** 100,000 Light Commercial Vehicle (LCV/SCV) NTC Applications  
+**Cohort Scale:** 100,000 New-To-Credit Light Commercial Vehicle (LCV/SCV) Applications  
 **Average Loan Ticket:** ₹7,50,000 | **Average Loan Tenure:** 48 Months  
-**Net Interest Margin (NIM) Spread:** 5.25% on Disbursed Asset Portfolio  
+**Target Book:** ₹2,850 Crore Portfolio Origination  
+**Net Interest Margin (NIM):** 5.25% Spread  
 
 ---
 
-## 1. Executive Unit Economics Summary
+## 1. Executive Summary & Value Creation
 
 | Performance Metric | Legacy Manual Underwriting | Green-Channel Gateway (STP) | Financial Variance / Economic Value |
 | :--- | :--- | :--- | :--- |
@@ -21,28 +22,57 @@
 
 ---
 
-## 2. Granular Underwriting Cost-to-Serve Breakdown
+## 2. Granular Cost-to-Serve Breakdown (OPEX)
 
-### 2.1 Legacy Manual Model (₹2,550 per Application)
-* **Physical Field Investigation (FI/FC):** ₹1,200. Agency travel to residential address and commercial parking yard.
-* **Document Verification & OCR Extraction:** ₹350. Manual ingestion of paper bank statements, utility bills, and ITRs.
-* **Credit Officer Underwriting Overhead:** ₹850. Average of 3.5 man-hours per file review.
-* **Tele-calling & Local Market Check:** ₹150. Manual phone verifications with local trade references.
+[Legacy Underwriting Pipeline: ₹2,550 per File]
+  |-- Physical Field Verification (FI/FC): ₹1,200 (47.1%)
+  |-- Credit Officer Review (3.5 hours):   ₹850   (33.3%)
+  |-- Manual Document Verification/OCR:    ₹350   (13.7%)
+  |-- Tele-calling & Agency Reference:     ₹150   (5.9%)
 
-### 2.2 Green-Channel Gateway Model (₹120 per Application)
-* **Account Aggregator Data Pull:** ₹15.00 (Regulated Sahamati network transaction fee).
-* **External Parameter APIs:** ₹20.00 (VAHAN chassis verification and NHAI toll API).
-* **Compute & Graph Analytics:** ₹15.00 (Serverless in-memory transaction parsing and identity graph checks).
-* **Blended Manual Triage Overhead:** ₹70.00 (Weighted cost across the borderline cohort routed to 60-minute manual review).
+[Green-Channel Gateway Pipeline: ₹120 per File]
+  |-- Blended Manual Triage Overhead:      ₹70    (58.3%)
+  |-- External Parameter APIs (VAHAN/Toll):₹20    (16.7%)
+  |-- Account Aggregator Pull Fee:         ₹15    (12.5%)
+  |-- Cloud Compute & Analytics:           ₹15    (12.5%)
+
+### 2.1 Legacy Operational Cost Details
+* Physical Field Investigations (FI/FC): ₹1,200. Agency travel, parking yard physical checks, and local trade inquiries.
+* Document Scraping & Manual Entry: ₹350. Manual entry of physical passbooks, electric utility bills, and ITR schedules.
+* Credit Underwriter Overhead: ₹850. An average of 3.5 hours of senior underwriter review time per application.
+* Reference Tele-calling Checks: ₹150. Phone calls to local vehicle brokers and suppliers.
+
+### 2.2 Green-Channel Gateway Cost Details
+* Account Aggregator Data Ingestion: ₹15.00. Sahamati regulated network fee per successful pull.
+* VAHAN & NHAI Corridor APIs: ₹20.00. Chassis technical specification and toll queries.
+* Serverless Compute Infrastructure: ₹15.00. In-memory ledger parsing, tokenization, and scoring pipeline.
+* Blended Manual Triage Overhead: ₹70.00. Allocated cost across the minority cohort routed to human review.
 
 ---
 
-## 3. Balance Sheet Provisioning & Credit Risk Analysis
+## 3. Balance Sheet Risk & Expected Credit Loss (ECL)
 
-Scaling origination volume often leads to asset quality deterioration. Green-Channel Gateway reverses this trend through non-compensatory behavioral circuit breakers:
+Rapidly scaling origination volumes in informal segments typically increases delinquency risk. Green-Channel Gateway counteracts this through non-compensatory behavioral circuit breakers.
 
-* **Legacy Portfolio Loss Provision:**
-  $$\text{ECL}_{\text{legacy}} = ₹2,100\text{ Cr Disbursed} \times 3.40\%\text{ NPA} \times 60\%\text{ LGD} = ₹42.84\text{ Crore}$$
-* **Green-Channel Portfolio Loss Provision:**
-  $$\text{ECL}_{\text{STP}} = ₹2,850\text{ Cr Disbursed} \times 2.15\%\text{ NPA} \times 60\%\text{ LGD} = ₹36.76\text{ Crore}$$
-* **Net Provisioning Benefit:** **₹6.08 Crore saved in loss reserves** despite onboarding ₹750 Crore in additional loans.
+### 3.1 Loss Provisioning Formulations
+Expected Credit Loss (ECL) = Disbursed Portfolio * Gross NPA Rate * Loss Given Default (LGD)
+
+* Legacy Portfolio ECL:
+  ECL_legacy = ₹2,100 Cr * 3.40% * 60% = ₹42.84 Crore
+
+* Green-Channel Portfolio ECL:
+  ECL_STP = ₹2,850 Cr * 2.15% * 60% = ₹36.76 Crore
+
+* Net Provisioning Reduction:
+  ₹6.08 Crore saved in mandatory balance sheet provisioning, alongside a ₹750 Crore book expansion.
+
+---
+
+## 4. Capital Efficiency & Portfolio Summary
+
+Total Economic Value Delivered (100,000 Case Deployment):
+  * Direct Operational OPEX Savings:         ₹24.30 Crore
+  * Annualized Net Interest Income (NIM):     ₹39.37 Crore / year
+  * Balance Sheet Risk Provisioning Savings:  ₹6.08 Crore
+  -----------------------------------------------------------
+  Total Year-1 Balance Sheet Value Added:     ₹69.75 Crore
